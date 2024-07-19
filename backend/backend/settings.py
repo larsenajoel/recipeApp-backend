@@ -97,10 +97,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME':'postgres',
+         'USER':'postgres',
+         'PASSWORD':'postgres34',
+         'HOST':'database-1.clsyw4gqc844.us-east-2.rds.amazonaws.com',
+         'PORT':'5432'
+     }
 }
 
 
@@ -148,5 +152,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWS_CREDENTIALS = True
 
-
-SECURE_SSL_REDIRECT = False
